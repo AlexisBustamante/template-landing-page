@@ -1,0 +1,328 @@
+/*RESET*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --colorMenu: #4d4d5c;
+  --colorHover: #6cc091;
+}
+
+/*HEADER*/
+header {
+  height: 100px;
+  background: var(--colorMenu);
+  padding: 0 50px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  text-transform: uppercase;
+  color: #6cc091;
+  font-weight: 200;
+}
+.menu a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 10px;
+  /* transition: 0,4s; */
+}
+
+.mostrar-menu,
+.esconder-menu {
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+  transition: 0, 4s;
+}
+/*se le da un orden a tavez de flex box*/
+.mostrar-menu {
+  order: 1;
+}
+
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover {
+  color: var(--colorHover);
+}
+
+#check {
+  display: none;
+}
+
+/*BANNER por id cuando se usa # */
+#banner {
+  padding: 0 50px;
+  background-image: url(./images/banner.jpg);
+  height: 45vh;
+  background-size: cover;
+  background-position: center;
+}
+
+#banner::before {
+  content: "";
+  background: rgba(77, 77, 92, 0.6);
+  position: absolute;
+  width: 100%;
+  height: 45vh;
+  left: 0;
+}
+.contenido-banner {
+  position: relative;
+  color: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contenido-banner h3 {
+  font-size: 30px;
+  font-weight: 400;
+  padding: 10px 0px;
+}
+.contenido-banner h3 span {
+  font-size: 30px;
+  font-weight: 600;
+  padding: 10px 0px;
+}
+
+.boton-empezar {
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid var(--colorHover);
+  align-self: baseline;
+  padding: 20px 40px;
+  transition: all 0.4s;
+}
+.boton-empezar:hover {
+  background: var(--colorHover);
+}
+/*PERSONAS*/
+#personas {
+  padding: 50px 50px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#personas img {
+  height: 120px;
+  width: 120px;
+  border-radius: 100%;
+}
+
+#personas div {
+  padding: 30px 40px;
+}
+#personas div h4 {
+  color: var(--colorMenu);
+  font-size: 20px;
+  margin: 15px 0px;
+}
+
+#personas div p {
+  color: var(--colorMenu);
+  font-size: 18px;
+}
+.boton-saber-mas {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--colorHover);
+  padding: 10px 30px;
+  border: 3px solid var(--colorHover);
+  border-radius: 30px;
+  margin-top: 15px;
+  transition: all 0.4s;
+}
+.boton-saber-mas:hover {
+  background-color: var(--colorHover);
+  color: #fff;
+}
+
+/*ICONOS*/
+#iconos {
+  padding: 0px 50px;
+  background-color: rgba(77, 77, 92, 0.6);
+}
+
+.contenido-iconos {
+  padding: 50px 50px 0px 50px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.contenido-iconos div {
+  flex: 1;
+  margin: 20px 0px;
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+#icono-mobile {
+  border: none;
+}
+
+.contenido-iconos div i {
+  color: var(--colorHover);
+}
+.contenido-iconos div h6 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 100;
+  margin: 10px 0px;
+}
+
+.contenido-iconos div p {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.boton-iconos {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+#contacto {
+  background: var(--colorHover);
+  padding: 50px 0px;
+  color: #fff;
+}
+
+#contacto h4 {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+#contacto h4 {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+#contacto form {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.datos-form {
+  display: flex;
+}
+
+.datos-form div {
+  padding: 10px;
+  flex: 1;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+form input,
+form textarea {
+  background: var(--colorHover);
+  border-radius: 10px;
+  border: 2px solid #8dcca9;
+  padding: 10px 5px;
+  outline: 0;
+  color: #fff;
+  width: 100%;
+}
+form input:focus,
+form textarea:focus {
+  border-color: #4bae77;
+  box-shadow: 0 0 0 1px #4bae77;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #fff;
+}
+
+.mensaje {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.boton-formulario .boton-saber-mas{
+  display: block;
+  border: 2px solid #fff;
+  color: #fff;
+  transition: 0.4s;
+text-align: center;
+}
+
+.boton-formulario .boton-saber-mas:hover {
+  background: #4fa776ad;
+ 
+}
+
+/*FOOTER*/
+footer{
+    background: #4d4d5c;
+    color: grey;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+
+
+/*Respondive*/
+@media (max-width: 768px) {
+  .mostrar-menu,
+  .esconder-menu {
+    display: block;
+  }
+  .menu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: var(--colorMenu);
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding: 100px 0px;
+    z-index: 100;
+    transition: 0.8s;
+  }
+
+  .menu a {
+    display: block;
+    padding: 20px;
+  }
+  .esconder-menu {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+  #check:checked ~ .menu {
+    right: 0;
+  }
+
+  /*PERSONAS*/
+
+  #personas {
+    flex-direction: column;
+  }
+
+  /*ICONOS*/
+  .contenido-iconos {
+    flex-direction: column;
+  }
+  .contenido-iconos div {
+    border: none;
+  }
+
+/*FORMULARIO*/
+
+.datos-form{
+    flex-direction: column;
+}
+
+}
