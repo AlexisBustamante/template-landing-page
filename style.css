@@ -250,28 +250,32 @@ form textarea::placeholder {
   padding: 10px;
 }
 
-.boton-formulario .boton-saber-mas{
+.boton-formulario .boton-saber-mas {
   display: block;
   border: 2px solid #fff;
   color: #fff;
   transition: 0.4s;
-text-align: center;
+  text-align: center;
 }
 
 .boton-formulario .boton-saber-mas:hover {
   background: #4fa776ad;
- 
+}
+
+.menu .boton-saber-mas {
+  padding: 10px 25px;
+}
+.menu .boton-saber-mas:hover {
+  color: #fff;
 }
 
 /*FOOTER*/
-footer{
-    background: #4d4d5c;
-    color: grey;
-    text-align: center;
-    padding: 10px 0px;
+footer {
+  background: #4d4d5c;
+  color: grey;
+  text-align: center;
+  padding: 10px 0px;
 }
-
-
 
 /*Respondive*/
 @media (max-width: 768px) {
@@ -319,10 +323,9 @@ footer{
     border: none;
   }
 
-/*FORMULARIO*/
+  /*FORMULARIO*/
 
-.datos-form{
+  .datos-form {
     flex-direction: column;
-}
-
+  }
 }
